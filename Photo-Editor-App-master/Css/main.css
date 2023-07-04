@@ -1,0 +1,122 @@
+/* ====================================== Global Reset ====================================== */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+/* ====================================== Clases Reset ====================================== */
+.fixedCavas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  max-width: 50% !important;
+  height: 30% !important;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.71);
+}
+
+.noFilter {
+  filter: none !important;
+}
+/* ====================================== Project Styling ====================================== */
+.container {
+  width: 80vw;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  margin-top: 30px;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img,
+canvas {
+  max-width: 45vw;
+  max-height: 60vh;
+}
+
+.upload input {
+  display: none;
+}
+
+.upload label {
+  color: #fff;
+  padding: 8px 20px;
+  border: 2px dashed #fff;
+  cursor: pointer;
+}
+
+.filters ul,
+.filters ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  direction: rtl;
+}
+
+.filters ul li label {
+  color: #fff;
+}
+
+.filters ul li:last-child {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.filters ul li a,
+span {
+  color: #fff;
+  padding: 10px 20px;
+  background: #060;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.copyright span {
+  all: unset;
+  cursor: pointer;
+  color: royalblue;
+  font-weight: 700;
+}
+
+/* ====================================== Media Quary ====================================== */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .img img,
+  canvas {
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+  .copyright {
+    padding-bottom: 30px;
+    margin-top: 25px;
+  }
+}
